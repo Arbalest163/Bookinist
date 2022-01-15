@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Bookinist.ViewModels
 {
-    public class ViewModelLocator
+    public static class ViewModelRegistrator
     {
-        public MainWindowViewModel MainWindowModel => App.Services.GetRequiredService<MainWindowViewModel>();
+        public static IServiceCollection AddViewModel(this IServiceCollection services) => services
+            ;
     }
 }
