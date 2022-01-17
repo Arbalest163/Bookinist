@@ -179,7 +179,7 @@ namespace Bookinist.Data
 
             var rnd = new Random();
 
-            var deals = Enumerable.Range(1, __BuyersCount)
+            var deals = Enumerable.Range(1, __DealsCount)
                     .Select(i => new Deal
                     {
                         Book = rnd.NextItem(_books),
