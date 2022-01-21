@@ -11,7 +11,9 @@ namespace Bookinist.Persistense
 {
     public class BookRepository : DbRepository<Book>
     {
-        public override IQueryable<Book> Items => base.Items.Include(item => new { item.Author, item.Genre });
+        public override IQueryable<Book> Items => base.Items
+            .Include(item => item.Author)
+            .Include(item => item.Genre);
         public BookRepository(BookinistDb db) : base(db) { }
     }
 }

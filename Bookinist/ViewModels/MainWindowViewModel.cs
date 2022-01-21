@@ -22,13 +22,11 @@ namespace Bookinist.ViewModels
 
         #endregion
 
-        //public MainWindowViewModel(IRepository<Book> bRp)
-        //{
-        //    _bRp = bRp;
+        public MainWindowViewModel(IRepository<Book> bRp)
+        {
+            _bRp = bRp;
 
-        //    var books = _bRp.Items.Take(10).ToArray();
-
-        //    int i = 10;
-        //}
+            var books = _bRp.Items.Take(10).ToArray();
+        }
     }
 }
